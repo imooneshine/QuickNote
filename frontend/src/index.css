@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+.ql-toolbar.ql-snow,
+.ql-container.ql-snow {
+  border: none !important;
+  font-family: inherit !important;
+}
+.ql-toolbar.ql-snow {
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+[data-theme="dark"] .ql-toolbar.ql-snow {
+  border-bottom: 1px solid #334155 !important;
+}
+.ql-editor {
+  min-height: 120px;
+  font-size: 1.125rem !important;
+  color: #334155;
+}
+[data-theme="dark"] .ql-editor {
+  color: #cbd5e1;
+}
+.ql-editor.ql-blank::before {
+  color: #94a3b8 !important;
+  font-style: normal !important;
+}
+[data-theme="dark"] .ql-editor.ql-blank::before {
+  color: #64748b !important;
+}
+[data-theme="dark"] .ql-snow .ql-stroke {
+  stroke: #cbd5e1 !important;
+}
+[data-theme="dark"] .ql-snow .ql-fill,
+[data-theme="dark"] .ql-snow .ql-stroke.ql-fill {
+  fill: #cbd5e1 !important;
+}
+[data-theme="dark"] .ql-snow .ql-picker {
+  color: #cbd5e1 !important;
+}
+.ql-snow.ql-toolbar button:hover .ql-stroke,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke,
+[data-theme="dark"] .ql-snow.ql-toolbar button:hover .ql-stroke,
+[data-theme="dark"] .ql-snow.ql-toolbar button.ql-active .ql-stroke {
+  stroke: #eab308 !important;
+}
+.ql-snow.ql-toolbar button:hover .ql-fill,
+.ql-snow.ql-toolbar button.ql-active .ql-fill,
+[data-theme="dark"] .ql-snow.ql-toolbar button:hover .ql-fill,
+[data-theme="dark"] .ql-snow.ql-toolbar button.ql-active .ql-fill {
+  fill: #eab308 !important;
+}
+.ql-snow.ql-toolbar button:hover,
+.ql-snow.ql-toolbar button.ql-active,
+.ql-snow.ql-toolbar .ql-picker-label:hover,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active,
+[data-theme="dark"] .ql-snow.ql-toolbar button:hover,
+[data-theme="dark"] .ql-snow.ql-toolbar button.ql-active,
+[data-theme="dark"] .ql-snow.ql-toolbar .ql-picker-label:hover,
+[data-theme="dark"] .ql-snow.ql-toolbar .ql-picker-label.ql-active {
+  color: #eab308 !important;
+}
+.modal-quill .ql-editor {
+  min-height: 300px;
+}
+.note-content p {
+  margin-bottom: 0.5rem;
+}
+.note-content p:last-child {
+  margin-bottom: 0;
+}
+.note-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.note-content ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.note-content a {
+  color: #eab308;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.note-content a:hover {
+  color: #ca8a04;
+}
+.note-content b,
+.note-content strong {
+  font-weight: 700;
+}
+.note-content i,
+.note-content em {
+  font-style: italic;
+}
+.note-content u {
+  text-decoration: underline;
+}
+.note-content s {
+  text-decoration: line-through;
+}
