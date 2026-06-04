@@ -10,6 +10,11 @@ const PrivateRoute = ({ children }) => {
   if (loading) return <div>Loading...</div>;
   return user ? children : <Navigate to="/login" />;
 };
+const PublicRoute = ({ children }) => {
+  const { user, loading } = useAuth();
+  if (loading) return <div>Loading...</div>;
+  return user ? <Navigate to="/" /> : children;
+};
 export default function App() {
   return (
     <>
@@ -33,8 +38,22 @@ export default function App() {
         }}
       />
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route
+          path="/login"
+          element={
+            <PublicRoute>
+              <Login />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <PublicRoute>
+              <Signup />
+            </PublicRoute>
+          }
+        />
         <Route
           path="/"
           element={
