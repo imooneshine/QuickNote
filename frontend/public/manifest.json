@@ -1,0 +1,36 @@
+{
+  "name": "QuickNote: Think it. Sync it. QuickNote it.",
+  "short_name": "QuickNote",
+  "description": "A secure and beautiful note-taking application.",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "auto"]
+  },
+  "orientation": "portrait",
+  "lang": "en-US",
+  "dir": "ltr",
+  "background_color": "#ffffff",
+  "theme_color": "#f8f9fa",
+  "categories": ["lifestyle", "notes"],
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
